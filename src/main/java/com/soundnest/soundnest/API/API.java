@@ -6,13 +6,13 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class API {
-    private static final String API_KEY = "AIzaSyDyWdvU3qhy5JAKRjN4YECrbg0yEyeiXYM";
+    private static final String API_KEY = "API_KEY";
 
     public API() {
     }
 
     public static boolean isVideoEmbeddable(String videoId) {
-        String apiUrl = "https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=" + videoId + "&key=AIzaSyDyWdvU3qhy5JAKRjN4YECrbg0yEyeiXYM";
+        String apiUrl = "https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=" + videoId + "API_KEY";
 
         try {
             URL url = new URL(apiUrl);
