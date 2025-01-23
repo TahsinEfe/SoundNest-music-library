@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="add-user-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soundnest.soundnest.Controllers.AddController">
+    <stylesheets>
+        <URL value="@CSSs/AddUser.css" />
+    </stylesheets>
+    <children>
+        <Label layoutX="200.0" layoutY="20.0" styleClass="header-label" text="Add New Entry" />
+
+        <Label layoutX="100.0" layoutY="80.0" text="Select Role:" />
+        <ComboBox fx:id="roleDropdown" layoutX="200.0" layoutY="75.0" onAction="#onRoleChanged" prefWidth="200.0" promptText="Choose a role">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="User" />
+                    <String fx:value="Artist" />
+                    <String fx:value="Admin" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <Label fx:id="labelName" layoutX="100.0" layoutY="130.0" text="Name:" visible="false" />
+        <TextField fx:id="inputName" layoutX="200.0" layoutY="125.0" prefWidth="200.0" visible="false" />
+
+        <Label fx:id="labelEmail" layoutX="100.0" layoutY="180.0" text="Email:" visible="false" />
+        <TextField fx:id="inputEmail" layoutX="200.0" layoutY="175.0" prefWidth="200.0" visible="false" />
+
+        <Label fx:id="labelPassword" layoutX="100.0" layoutY="230.0" text="Password:" visible="false" />
+        <TextField fx:id="inputPassword" layoutX="200.0" layoutY="225.0" prefWidth="200.0" visible="false" />
+
+        <Label fx:id="labelUserId" layoutX="100.0" layoutY="130.0" text="User ID:" visible="false" />
+        <TextField fx:id="inputUserId" layoutX="200.0" layoutY="125.0" prefWidth="200.0" visible="false" />
+
+        <Label fx:id="labelAdminName" layoutX="100.0" layoutY="180.0" text="Admin Name:" visible="false" />
+        <TextField fx:id="inputAdminName" layoutX="200.0" layoutY="175.0" prefWidth="200.0" visible="false" />
+
+        <Label fx:id="labelAdminPassword" layoutX="100.0" layoutY="230.0" text="Admin Password:" visible="false" />
+        <TextField fx:id="inputAdminPassword" layoutX="200.0" layoutY="225.0" prefWidth="200.0" visible="false" />
+
+        <Button fx:id="addButton" layoutX="343.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#onAddButtonClick" prefHeight="42.0" prefWidth="77.0" style="-fx-background-color: #008000;" text="SAVE" textFill="WHITE" />
+
+        <Button fx:id="backButton" layoutX="150.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onBackClick" styleClass="back-button" text="BACK" />
+    </children>
+</AnchorPane>

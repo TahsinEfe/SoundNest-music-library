@@ -1,0 +1,35 @@
+.main-pane {
+    -fx-background-color: #f4f4f4;
+}
+
+.back-button, .add-button, .save-button {
+    -fx-background-color: #0066cc;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 15px;
+}
+
+.back-button:hover, .add-button:hover, .save-button:hover {
+    -fx-background-color: #3399ff;
+}
+
+.TableView {
+    -fx-background-color: white;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 5px;
+}
+
+.delete-button {
+    -fx-background-color: #cc3300;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 15px;
+}
+
+.delete-button:hover {
+    -fx-background-color: #ff6666;
+}

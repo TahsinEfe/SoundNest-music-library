@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.soundnest.soundnest.Controllers.FollowersController"
+            prefHeight="600.0" prefWidth="800.0"
+            styleClass="followers-pane">
+
+    <stylesheets>
+        <URL value="@CSSs/followers.css" />
+    </stylesheets>
+    <children>
+        <VBox spacing="20.0" layoutX="20.0" layoutY="20.0" prefWidth="760.0">
+            <HBox spacing="10.0" alignment="CENTER">
+                <TextField fx:id="searchField" promptText="Search users or artists..." styleClass="search-bar" />
+                <Button text="Search" onAction="#onSearchButtonClick" styleClass="search-button" />
+            </HBox>
+
+            <ListView fx:id="searchResultsList" styleClass="results-list" prefHeight="200.0" />
+
+            <Label text="Currently Following:" styleClass="section-title" />
+            <ListView fx:id="followingList" styleClass="following-list" prefHeight="200.0" />
+        </VBox>
+
+        <HBox spacing="20.0" layoutX="20.0" layoutY="550.0" alignment="CENTER">
+            <Button text="Follow" onAction="#onFollowButtonClick" styleClass="action-button" />
+            <Button text="Delete" onAction="#onDeleteButtonClick" styleClass="action-button" />
+            <Button text="Back" onAction="#onBackButtonClick" styleClass="back-button" />
+        </HBox>
+    </children>
+</AnchorPane>

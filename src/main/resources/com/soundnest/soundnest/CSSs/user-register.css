@@ -1,0 +1,53 @@
+/* Genel Stil */
+.root {
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-background-color: #F4F4F9;
+}
+
+/* İkon Stili */
+.field-container {
+    -fx-display: flex;
+    -fx-alignment: center-left;
+    -fx-spacing: 5;
+}
+
+.field-icon {
+    -fx-font-size: 16px;
+    -fx-text-fill: #AAAAAA;
+}
+
+/* Giriş Alanları */
+.input-field {
+    -fx-prompt-text-fill: #AAAAAA;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 5;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+/* Kayıt Butonu */
+.submit-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.submit-button:hover {
+    -fx-background-color: #001B2C;
+}
+
+/* Geri Bağlantı */
+.back-link {
+    -fx-text-fill: #4CAF50;
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+}
+
+.back-link:hover {
+    -fx-text-fill: #3E8E41;
+    -fx-underline: true;
+}

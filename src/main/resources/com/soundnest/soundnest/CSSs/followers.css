@@ -1,0 +1,71 @@
+/* Root styles for AnchorPane */
+.followers-pane {
+    -fx-background-color: #f4f4f9;
+    -fx-padding: 20;
+}
+
+/* Search Bar */
+.search-bar {
+    -fx-prompt-text-fill: #a0a0a0;
+    -fx-font-size: 14px;
+    -fx-border-color: #d0d0d0;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 10;
+}
+
+.search-button {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.search-button:hover {
+    -fx-background-color: #45a049;
+}
+
+/* ListView Styles */
+.results-list, .following-list {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+/* Section Title */
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Buttons */
+.action-button {
+    -fx-background-color: #008cba;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.action-button:hover {
+    -fx-background-color: #007bb5;
+}
+
+.back-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.back-button:hover {
+    -fx-background-color: #e53935;
+}

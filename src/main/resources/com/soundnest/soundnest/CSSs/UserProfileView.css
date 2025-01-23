@@ -1,0 +1,68 @@
+
+AnchorPane {
+    -fx-background-color: #f4f4f4;
+}
+
+
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #001B2C;
+    -fx-alignment: center;
+}
+
+
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.input-field {
+    -fx-background-color: white;
+    -fx-border-color: #aaa;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-border-color: #72A0C1;
+    -fx-border-width: 2px;
+}
+
+
+.save-button {
+    -fx-background-color: #008000;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 10px;
+}
+
+.save-button:hover {
+    -fx-background-color: #006600;
+}
+
+.save-button:pressed {
+    -fx-background-color: #004d00;
+}
+
+
+.back-button {
+    -fx-background-color: #333333;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 10px;
+}
+
+.back-button:hover {
+    -fx-background-color: #555555;
+}
+
+.back-button:pressed {
+    -fx-background-color: #777777;
+}

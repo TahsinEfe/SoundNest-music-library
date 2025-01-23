@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="main-pane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soundnest.soundnest.Controllers.SongsViewController">
+    <stylesheets>
+        <URL value="@CSSs/SongsView.css" />
+    </stylesheets>
+    <children>
+        <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onBackClick" text="&lt; Back" styleClass="back-button" />
+
+        <TableView fx:id="songsTable" layoutX="50.0" layoutY="50.0" prefHeight="400.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Genre" />
+                <TableColumn fx:id="durationColumn" text="Duration" />
+                <TableColumn fx:id="songNameColumn" text="Song Name" />
+                <TableColumn fx:id="songLinkColumn" text="Song Link" />
+            </columns>
+        </TableView>
+
+        <VBox fx:id="addSongForm" layoutX="50.0" layoutY="500.0" spacing="10.0" visible="false">
+            <TextField fx:id="titleField" promptText="Enter Title" />
+            <TextField fx:id="durationField" promptText="Enter Duration" />
+            <TextField fx:id="songNameField" promptText="Enter Song Name" />
+            <TextField fx:id="songLinkField" promptText="Enter Song Link" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onMouseClicked="#onSaveClick" text="Save" styleClass="save-button" />
+        </VBox>
+
+        <Button fx:id="addButton" layoutX="550.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#onAddClick" text="Add Song" styleClass="add-button" />
+        <Button fx:id="deleteButton" layoutX="650.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#onDeleteClick" text="Delete Song" styleClass="delete-button" />
+    </children>
+</AnchorPane>

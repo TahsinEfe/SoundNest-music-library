@@ -1,0 +1,96 @@
+/* Ana panelin stili */
+.add-user-pane {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #001B2C;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+}
+
+/* Başlık stili */
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #001B2C;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}
+
+/* Label stili */
+Label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #001B2C;
+}
+
+/* TextField stili */
+TextField {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #001B2C;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+TextField:focused {
+    -fx-border-color: #72A0C1;
+    -fx-border-width: 2px;
+}
+
+/* ComboBox stili */
+ComboBox {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #001B2C;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+ComboBox:focused {
+    -fx-border-color: #72A0C1;
+    -fx-border-width: 2px;
+}
+
+/* SAVE butonunun stili */
+.save-button {
+    -fx-background-color: #001B2C;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #004d66;
+    -fx-border-width: 2px;
+    -fx-padding: 10px 20px;
+}
+
+.save-button:hover {
+    -fx-background-color: #004d66;
+    -fx-border-color: #72A0C1;
+}
+
+.save-button:pressed {
+    -fx-background-color: #00334d;
+    -fx-border-color: #72A0C1;
+}
+
+.back-button {
+    -fx-background-color: #001B2C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-border-color: #004d66;
+    -fx-border-width: 2px;
+}
+
+.back-button:hover {
+    -fx-background-color: #004d66;
+    -fx-border-color: #0080ff;
+}
+
+.back-button:pressed {
+    -fx-background-color: #00334d;
+}
+

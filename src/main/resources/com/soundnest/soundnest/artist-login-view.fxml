@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<AnchorPane prefHeight="384.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soundnest.soundnest.Controllers.ArtistLoginController" >
+    <children>
+        <VBox layoutX="387.0" layoutY="2.0" prefHeight="384.0" prefWidth="542.0" spacing="10">
+            <Label prefHeight="35.0" prefWidth="302.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Sound-Nest Music Library">
+                <VBox.margin>
+                    <Insets left="120.0" top="12.0" />
+                </VBox.margin></Label>
+            <TextField fx:id="artistNameField" promptText="ArtistName">
+                <VBox.margin>
+                    <Insets bottom="5.0" left="120.0" right="120.0" top="50.0" />
+                </VBox.margin></TextField>
+            <PasswordField fx:id="artistPasswordField" prefHeight="26.0" prefWidth="248.0" promptText="ArtistPassword">
+                <VBox.margin>
+                    <Insets bottom="5.0" left="120.0" right="120.0" top="5.0" />
+                </VBox.margin></PasswordField>
+            <Button id="btnLogin" fx:id="btnLogin" alignment="CENTER" prefHeight="38.0" prefWidth="64.0"
+                    style="-fx-background-color: #001B2C;" text="Login" textAlignment="CENTER" textFill="WHITE"
+                    onMouseClicked="#onLoginClick">
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+                <VBox.margin>
+                    <Insets left="230.0" />
+                </VBox.margin></Button>
+            <HBox spacing="10">
+                <Hyperlink id="btnAdminLogin" fx:id="adminLoginLink" onMouseClicked="#onAdminLoginClick" text="Admin Login">
+                    <HBox.margin>
+                        <Insets left="160.0" right="40.0" />
+                    </HBox.margin></Hyperlink>
+                <Hyperlink id="btnUserLogin" fx:id="userLoginLink" onMouseClicked="#onUserLoginClick" prefHeight="24.0" prefWidth="93.0" text="User Login" />
+            </HBox>
+        </VBox>
+        <ImageView fitHeight="388.0" fitWidth="495.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/image.png" />
+            </image>
+        </ImageView>
+        <FontAwesomeIconView glyphName="USER" layoutX="486.0" layoutY="123.0" />
+        <FontAwesomeIconView glyphName="LOCK" layoutX="487.0" layoutY="171.0" />
+    </children>
+</AnchorPane>

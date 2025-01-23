@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.soundnest.soundnest.Controllers.PlaylistViewController">
+    <content>
+        <AnchorPane prefHeight="600.0" prefWidth="800.0">
+            <stylesheets>
+                <URL value="@CSSs/PlaylistView.css" />
+            </stylesheets>
+            <children>
+                <VBox layoutX="10.0" layoutY="10.0" prefHeight="480.0" prefWidth="200.0" styleClass="sidebar">
+                    <children>
+                        <ListView fx:id="playlistList" styleClass="list-view" />
+                        <TextField fx:id="playlistNameField" promptText="Enter Playlist Name" styleClass="text-field" />
+                        <Button onMouseClicked="#onCreatePlaylist" styleClass="primary-button" text="Create Playlist" />
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Button fx:id="editButton" onMouseClicked="#onEditPlaylist" styleClass="secondary-button" text="Edit" />
+                                <Button fx:id="deleteButton" onMouseClicked="#onDeletePlaylist" styleClass="secondary-button" text="Delete" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox layoutX="220.0" layoutY="10.0" prefHeight="480.0" prefWidth="570.0" spacing="15" styleClass="main-content">
+                    <children>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <TextField fx:id="searchField" promptText="Search..." styleClass="search-field" />
+                                <ListView fx:id="searchResultsList" prefHeight="120.0" styleClass="search-results" />
+                            </children>
+                        </HBox>
+                        <ListView fx:id="songList" prefHeight="268.0" prefWidth="554.0" styleClass="list-view" />
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <TextField fx:id="songNameField" promptText="Enter Song Name" styleClass="text-field" />
+                                <TextField fx:id="songLinkField" promptText="Enter Song Link" styleClass="text-field" />
+                                <Button onMouseClicked="#onAddSong" styleClass="primary-button" text="Add Song" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="10">
+                            <children>
+                                <Button fx:id="editSongButton" onMouseClicked="#onEditSongClick" styleClass="secondary-button" text="Edit Song" />
+                                <Button fx:id="deleteSongButton" onMouseClicked="#onDeleteSongClick" styleClass="secondary-button" text="Delete Song" />
+                                <Button fx:id="backButton" onMouseClicked="#onBackToMainClick" styleClass="secondary-button" text="Back to Main" />
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="20">
+                            <children>
+                                <Button fx:id="playButton" onMouseClicked="#onPlayButtonClick" styleClass="control-button" text="Play" />
+                                <Button onAction="#onLoginWithGoogleClick" styleClass="secondary-button" text="Login with Google" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <WebView fx:id="webView" layoutX="10.0" layoutY="500.0" prefHeight="100.0" prefWidth="780.0" styleClass="web-view" />
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

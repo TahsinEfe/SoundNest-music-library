@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.soundnest.soundnest.Controllers.ArtistMainPageController">
+    <stylesheets>
+        <URL value="@CSSs/UserMainPage.css" />
+    </stylesheets>
+    <children>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="200.0" styleClass="scroll-pane">
+            <VBox alignment="CENTER" spacing="20" styleClass="sidebar-menu">
+
+
+                <HBox alignment="CENTER_LEFT" spacing="5" styleClass="search-container">
+                    <StackPane>
+                        <TextField fx:id="searchField" promptText="Search..." styleClass="search-field" />
+                        <Label text="🔍" styleClass="search-icon" />
+                    </StackPane>
+                    <Button text="Search" onAction="#onSearchButtonClick" styleClass="search-button" />
+                </HBox>
+                <ListView fx:id="searchResultsList" styleClass="search-results" />
+                <Button onMouseClicked="#onHomeClick" styleClass="menu-button" text="Home">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" />
+                    </graphic>
+                </Button>
+                <Button onMouseClicked="#onProfileClick" styleClass="menu-button" text="Profile">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USER" />
+                    </graphic>
+                </Button>
+                <Button onMouseClicked="#onSongsClick" styleClass="menu-button" text="Songs">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MUSIC" />
+                    </graphic>
+                </Button>
+                <Button fx:id="albumButton" onMouseClicked="#onAlbumClick" styleClass="menu-button" text="Albums">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST" />
+                    </graphic>
+                </Button>
+                <Button onMouseClicked="#onLogOutClick" styleClass="menu-button" text="LogOut">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ANGLE_LEFT" />
+                    </graphic>
+                </Button>
+            </VBox>
+        </ScrollPane>
+
+        <TilePane fx:id="contentPane" hgap="20.0" layoutX="200.0" layoutY="0.0" prefHeight="550.0" prefWidth="600.0" styleClass="content-tile" vgap="20.0">
+            <children>
+                <VBox alignment="CENTER" styleClass="content-item">
+                    <ImageView fx:id="artistImage" fitHeight="120.0" fitWidth="120.0" styleClass="artist-image" />
+                    <Label fx:id="artistName" styleClass="artist-name" text="Artist Name" />
+                </VBox>
+            </children>
+        </TilePane>
+    </children>
+</AnchorPane>

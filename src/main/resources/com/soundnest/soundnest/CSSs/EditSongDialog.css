@@ -1,0 +1,24 @@
+.header-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-padding: 10 0;
+}
+
+.input-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+.save-button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5 20;
+}
+
+.save-button:hover {
+    -fx-background-color: #2ecc71;
+}
